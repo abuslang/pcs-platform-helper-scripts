@@ -20,8 +20,6 @@ argParser.add_argument("-v", "--verbose", action='store_true', help="Print Verbo
 argParser.add_argument("-f", "--file", default="purge_accounts.json", help="Define Cache File")
 argParser.add_argument("-c", "--cache", action='store_true', help="Cache Results")
 argParser.add_argument("-x", "--config", action='store', help="Authorization - Config File (~/.prismacloud)", required=True)
-# added this instead to read the config file from the same directory
-#argParser.add_argument("-x", "--config", action='store', help="Authorization - Config File (/.prismacloud)", required=True)
 
 args = argParser.parse_args()
 
