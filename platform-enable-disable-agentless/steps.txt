@@ -1,13 +1,23 @@
+# create the ~./prismacloud directory, and within it create a file called credentials.json
+
 mkdir ~/.prismacloud
 vim credentials.json
-paste in credentials
 
-create env
+# paste in credentials, should look like below. identity: public key, secret: secret key. app_stack: app number
+
+#{
+#    "ca_cert":"",
+#    "app_stack": "app#",
+#    "identity": "",
+#    "secret": ""
+#}
+
+# create python env
 
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 
-run file first run
+# run command as follows
 
 python cwp-bulk-purge.py -x credentials.json -c -f purge_accounts.json
